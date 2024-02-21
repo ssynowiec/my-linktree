@@ -1,12 +1,21 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import { Button } from '@/components/ui/button';
+import profileImage from '../../public/photo.png';
 ---
 
 <Layout title='Stanisław Synowiec | ssynowiec.pl'>
 	<main>
 		<h1>Hello World</h1>
+		<Image
+			src={profileImage}
+			alt='Stanisław Synowiec profile photo'
+			width={150}
+			height={150}
+			class='rounded-full'
+		/>
 		<Button>Click</Button>
 	</main>
 </Layout>

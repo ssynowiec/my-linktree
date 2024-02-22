@@ -2,6 +2,6 @@
 
 ### Created with:
 
--   Astro
--   Tailwind
--   Shadcn/ui
+- Astro
+- Tailwind
+- Shadcn/ui

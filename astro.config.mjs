@@ -6,15 +6,15 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		react(),
-		tailwind({
-			applyBaseStyles: false,
-		}),
-	],
-	output: 'server',
-	adapter: vercel(),
-	image: {
-		service: passthroughImageService(),
-	},
+  integrations: [
+    react(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
+  output: 'server',
+  adapter: vercel(),
+  image: {
+    service: passthroughImageService(),
+  },
 });

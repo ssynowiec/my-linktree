@@ -1,83 +1,92 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
 import profileImage from '../../public/photo.png';
 import { buttonVariants } from '@/components/ui/button';
 import githubIcon from '../../public/github.svg';
 import linkedinIcon from '../../public/linkedin.svg';
 import xIcon from '../../public/x.svg';
-import { MailIcon } from 'lucide-react';
+import { MailIcon, Presentation } from 'lucide-react';
 ---
 
 <Layout title='Stanisław Synowiec | ssynowiec.pl'>
-	<main class='flex justify-center flex-col items-center flex-1'>
-		<Image
-			src={profileImage}
-			alt='Stanisław Synowiec profile'
-			width={1000}
-			height={1000}
-			class='rounded-full w-24 h-24 my-2'
-			loading='eager'
-		/>
-		<h1 class='font-extrabold text-2xl my-2'>Stanisław Synowiec</h1>
-		<p class='my-2'>Hello 👋</p>
-		<section class='flex flex-col'>
-			<a
-				href='https://github.com/ssynowiec'
-				class={buttonVariants({
-					variant: 'outline',
-					class: 'my-2',
-				})}
-				target='_blank'
-			>
-				<Image
-					src={githubIcon}
-					alt='Github Icon'
-					class='mr-4'
-					loading='eager'
-				/>
-				github.com/ssynowiec</a
-			>
-			<a
-				href='https://linkedin.com/in/ssynowiecpl'
-				class={buttonVariants({
-					variant: 'outline',
-					class: 'my-2',
-				})}
-				target='_blank'
-			>
-				<Image
-					src={linkedinIcon}
-					alt='Linkedin Icon'
-					class='mr-4'
-					loading='eager'
-				/>
-				linkedin.com/in/ssynowiecpl</a
-			>
-			<a
-				href='https://x.com/ssynowiec1410'
-				class={buttonVariants({
-					variant: 'outline',
-					class: 'mb-2 mt-2',
-				})}
-				target='_blank'
-			>
-				<Image src={xIcon} alt='X Icon' class='mr-4' loading='eager' />
-				@ssynowiec1410</a
-			>
-			<a
-				href='mailto:stanislaw@ssynowiec.pl'
-				class={buttonVariants({
-					variant: 'outline',
-					class: 'mb-2 mt-2',
-				})}
-				target='_blank'
-			>
-				<MailIcon />
-				<!-- <Image src={MailIcon} alt='Mail Icon' class='mr-4' /> -->
-				<span class='ml-4'>stanislaw@ssynowiec.pl</span></a
-			>
-		</section>
-	</main>
+  <main class='flex justify-center flex-col items-center flex-1'>
+    <Image
+      src={profileImage}
+      alt='Stanisław Synowiec profile'
+      width={1000}
+      height={1000}
+      class='rounded-full w-24 h-24 my-2'
+      loading='eager'
+    />
+    <h1 class='font-extrabold text-2xl my-2'>Stanisław Synowiec</h1>
+    <p class='my-2'>Hello 👋</p>
+    <section class='flex flex-col'>
+      <a
+        href='/lucia-auth-demo-presentation'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'my-2',
+        })}
+      >
+        <Presentation />
+        <span class='ml-4'>Lucia Auth Demo Presentation</span>
+      </a>
+      <a
+        href='https://github.com/ssynowiec'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'my-2',
+        })}
+        target='_blank'
+      >
+        <Image
+          src={githubIcon}
+          alt='Github Icon'
+          class='mr-4'
+          loading='eager'
+        />
+        github.com/ssynowiec</a
+      >
+      <a
+        href='https://linkedin.com/in/ssynowiecpl'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'my-2',
+        })}
+        target='_blank'
+      >
+        <Image
+          src={linkedinIcon}
+          alt='Linkedin Icon'
+          class='mr-4'
+          loading='eager'
+        />
+        linkedin.com/in/ssynowiecpl</a
+      >
+      <a
+        href='https://x.com/ssynowiec1410'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'mb-2 mt-2',
+        })}
+        target='_blank'
+      >
+        <Image src={xIcon} alt='X Icon' class='mr-4' loading='eager' />
+        @ssynowiec1410</a
+      >
+      <a
+        href='mailto:stanislaw@ssynowiec.pl'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'mb-2 mt-2',
+        })}
+        target='_blank'
+      >
+        <MailIcon />
+        <!-- <Image src={MailIcon} alt='Mail Icon' class='mr-4' /> -->
+        <span class='ml-4'>stanislaw@ssynowiec.pl</span></a
+      >
+    </section>
+  </main>
 </Layout>

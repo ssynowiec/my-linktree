@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { Image } from 'astro:assets';
+import pdf from '../../public/pdf.svg';
+import { Radio, Code2, MoveLeft } from 'lucide-react';
+---
+
+<Layout title='Lucia auth demo presentation'>
+  <main class='flex justify-center flex-col items-center flex-1'>
+    <h1 class='font-extrabold text-2xl my-2 text-center'>
+      Lucia auth demo presentation (29.02.2024)
+    </h1>
+    <p class='my-2'>Lucia auth new (better?) auth library</p>
+    <section class='flex flex-col'>
+      <a
+        href='/lucia-auth-demo-presentation'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'my-2',
+        })}
+      >
+        <Image
+          src={pdf}
+          alt='X Icon'
+          class='w-[24px] h-[24px]'
+          loading='eager'
+        />
+        <span class='ml-4'>Presentation (.pdf)</span>
+      </a>
+      <a
+        href='https://github.com/ssynowiec/lucia-demo'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'my-2',
+        })}
+        target='_blank'
+      >
+        <Code2 />
+        <span class='ml-4'>Source code (GitHub)</span>
+      </a>
+      <a
+        href='https://lucia-auth-demo.vercel.app/'
+        class={buttonVariants({
+          variant: 'outline',
+          class: 'my-2',
+        })}
+        target='_blank'
+      >
+        <Radio />
+        <span class='ml-4'>Live demo</span>
+      </a>
+    </section>
+    <a href='/' class='flex'>
+      <MoveLeft />
+      <span class='ml-4'>Back to linktree</span>
+    </a>
+  </main>
+</Layout>
